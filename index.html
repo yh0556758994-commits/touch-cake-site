@@ -170,15 +170,20 @@ footer{background:var(--soft); padding:80px 10%; text-align:center; font-weight:
 
 <section class="section" id="order">
 <h2 data-aos="fade-up">טופס הזמנה</h2>
-<form>
-<input type="text" placeholder="שם מלא" required>
-<input type="tel" placeholder="טלפון (05XXXXXXXX)" required pattern="^05\d{8}$">
+
+<form onsubmit="sendMail(event)">
+<input id="name" type="text" placeholder="שם מלא" required>
+
+<input id="phone" type="tel" placeholder="טלפון (05XXXXXXXX)" required pattern="^05\d{8}$">
+
 <input type="date" id="eventDate" required>
-<textarea placeholder="ספר/י לנו איזה עוגה תרצו" rows="4" required></textarea>
+
+<textarea id="message" placeholder="ספר/י לנו איזה עוגה תרצו" rows="4" required></textarea>
+
 <button type="submit">שלח/י הזמנה</button>
 </form>
-</section>
 
+</section>
 <footer>
 <p>© 2026 TOUCH CAKE</p>
 </footer>
@@ -216,26 +221,6 @@ for(let i=0;i<70;i++){
 
 <script>
 (function(){
-emailjs.init("PUBLIC_KEY");
-})();
-
-function sendMail(event){
-event.preventDefault();
-
-emailjs.send("SERVICE_ID","TEMPLATE_ID",{
-name: document.getElementById("name").value,
-phone: document.getElementById("phone").value,
-message: document.getElementById("message").value
-})
-.then(function(){
-alert("ההזמנה נשלחה בהצלחה!");
-});
-}
-</script>
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
-<script>
-(function(){
 emailjs.init("VmGWM5F_ExUtl8zh9");
 })();
 
@@ -252,6 +237,10 @@ alert("ההזמנה נשלחה בהצלחה!");
 });
 }
 </script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+
 </body>
 
 </html>
+
