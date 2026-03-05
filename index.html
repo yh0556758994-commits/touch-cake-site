@@ -232,5 +232,26 @@ alert("ההזמנה נשלחה בהצלחה!");
 });
 }
 </script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+emailjs.init("VmGWM5F_ExUtl8zh9");
+})();
+
+function sendMail(event){
+event.preventDefault();
+
+emailjs.send("service_nhn9mea","template_vua9dmb",{
+name: document.getElementById("name").value,
+phone: document.getElementById("phone").value,
+message: document.getElementById("message").value
+})
+.then(function(){
+alert("ההזמנה נשלחה בהצלחה!");
+});
+}
+</script>
 </body>
+
 </html>
