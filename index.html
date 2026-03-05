@@ -235,6 +235,9 @@ message: document.getElementById("message").value
 })
 .then(function(){
 alert("ההזמנה נשלחה בהצלחה!");
+}, function(error){
+alert("שגיאה בשליחה");
+console.log(error);
 });
 }
 </script>
@@ -244,6 +247,7 @@ alert("ההזמנה נשלחה בהצלחה!");
 </body>
 
 </html>
+
 
 
 
