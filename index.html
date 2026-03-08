@@ -308,9 +308,36 @@ console.log(error);
  
 
 
+
+
+
+
+<label>בחר צבע לכותרת:</label>
+<input type="color" id="titleColor" value="#e10098">
+
+<h1 id="demoTitle">הכותרת שלי</h1>
+
+<script>
+const colorInput = document.getElementById('titleColor');
+const demoTitle = document.getElementById('demoTitle');
+
+colorInput.addEventListener('input', (e) => {
+    demoTitle.style.color = e.target.value; // משנה את הצבע של הכותרת בזמן אמת
+});
+</script>
+
+
+
+
+
+
+
+  
+
 </body>
 
 </html>
+
 
 
 
