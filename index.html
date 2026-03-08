@@ -68,7 +68,7 @@ z-index:0;
 .hero h1{
 font-family:'Cinzel', serif;
 font-size:4rem;
-  color: #d058aa ;
+  color: #ffa97a ;
   /* color:var(--primary); */
 margin-bottom:25px; text-shadow:0 4px 25px rgba(225,0,152,.35);
 z-index:2; position:relative;
@@ -108,9 +108,13 @@ font-family:'Cinzel', serif;
 font-size:2.8rem; color:var(--primary); margin-bottom:70px;
 letter-spacing:1px; text-shadow:0 2px 12px rgba(225,0,152,.15);
 }
-#order {
-    text-align: left;      /* מיישר את כל תוכן הסקשן לשמאל */
-    padding-left: 10px;    /* מרחק מהקצה השמאלי של הדף */
+
+  #order{
+padding-left: 10px;
+  }
+#order h2{
+    margin-left: 0;       /* מיישר את כל תוכן הסקשן לשמאל */
+        /* מרחק מהקצה השמאלי של הדף */
 }
   
 
@@ -173,7 +177,7 @@ gap:22px;  */
     flex-direction: column;
     gap: 22px;
     margin: 0;  
-   padding-left: 40px;     /* זה מזיז את כל השדות 80px פנימה */
+    padding-left: 0;    /* זה מזיז את כל השדות 80px פנימה */
   /* box-sizing: border-box; */
 }
 input,textarea{
@@ -334,6 +338,7 @@ colorInput.addEventListener('input', (e) => {
 </body>
 
 </html>
+
 
 
 
