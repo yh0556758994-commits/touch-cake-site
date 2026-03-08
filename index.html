@@ -175,7 +175,9 @@ gap:22px;  */
     display: flex;
     flex-direction: column;
     gap: 22px;
-    margin: 10px;  
+    margin: 0;  
+   padding-left: 40px;     /* זה מזיז את כל השדות 80px פנימה */
+  box-sizing: border-box;
 }
 input,textarea{
   /* padding:18px; border:1px solid #ddd; border-radius:15px; */
@@ -183,7 +185,7 @@ input,textarea{
   font-size: 1rem;
     transition: .3s;
     width: 100%;           /* ממלא את רוחב הטופס */
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
   padding: 18px;
     border: 1px solid #ddd;
     border-radius: 15px;
@@ -309,6 +311,7 @@ console.log(error);
 </body>
 
 </html>
+
 
 
 
