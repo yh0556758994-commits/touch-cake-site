@@ -106,10 +106,13 @@ font-family:'Cinzel', serif;
 font-size:2.8rem; color:var(--primary); margin-bottom:70px;
 letter-spacing:1px; text-shadow:0 2px 12px rgba(225,0,152,.15);
 }
-
+#order {
+    text-align: left;      /* מיישר את כל תוכן הסקשן לשמאל */
+    padding-left: 80px;    /* מרחק מהקצה השמאלי של הדף */
+}
+  
   #order h2{
-text-align:right;
-padding-right:12%;
+ margin-left: 0;
 }
 
 .sectiones{
@@ -159,15 +162,30 @@ transition:.4s; text-align:center; font-weight:600; font-size:1.1rem;
 /* FORM */
 form{
   /* max-width:650px; margin:auto; display:flex; flex-direction:column; gap:22px; */
-max-width:650px;
+/* max-width:650px;
 /* margin:0 auto; */
-  margin-left:120px;
+  /* margin-left:120px;
 display:flex;
 flex-direction:column;
-gap:22px;
+gap:22px;  */
+
+   max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin: 0;  
 }
 input,textarea{
-  padding:18px; border:1px solid #ddd; border-radius:15px; font-family:inherit; font-size:1rem; transition:.3s;
+  /* padding:18px; border:1px solid #ddd; border-radius:15px; */
+  font-family:inherit;
+  font-size: 1rem;
+    transition: .3s;
+    width: 100%;           /* ממלא את רוחב הטופס */
+    box-sizing: border-box;
+  padding: 18px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+  /* font-size:1rem; transition:.3s; */
 
 }
 input:focus, textarea:focus{border-color:var(--primary); box-shadow:0 5px 25px rgba(225,0,152,.2); outline:none;}
@@ -289,6 +307,7 @@ console.log(error);
 </body>
 
 </html>
+
 
 
 
