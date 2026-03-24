@@ -124,10 +124,18 @@ padding-left: 10px;
 
 .sectiones{
   height:100vh;
-background:linear-gradient(rgba(255,255,255,0.25), rgba(255,255,255,0.25)), url('images/unnamed.jpg') no-repeat center center/cover;
-display:flex; flex-direction:column; justify-content:center; align-items:center;
-text-align:center; /*position:relative*/; overflow:hidden;
-z-index:0;
+  background:linear-gradient(rgba(255,255,255,0.25), rgba(255,255,255,0.25)), url('images/unnamed.jpg') no-repeat center center/cover;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+
+  align-items:flex-start;   /* ← במקום center */
+  padding-left:12%;         /* ← מזיז לשליש שמאלי */
+  
+  text-align:right;
+  overflow:hidden;
+  z-index:0;
 }
   
    /* .sectiones h2{
