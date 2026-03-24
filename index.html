@@ -221,11 +221,9 @@ footer{background:var(--soft); padding:80px 10%; text-align:center; font-weight:
 .section{padding:80px 5%;}
 .card{height:300px;}
 }
-  .order-form{
-margin-right:68%;   /* מזיז שמאלה בעמוד RTL */
-}
-  .order-form {
-  margin-right:68%;  /* מזיז את הטופס והכותרת שמאלה בעמוד RTL */
+.order-title {
+  margin-right:68%;   /* מזיז את הכותרת שמאלה בעמוד RTL */
+  text-align:right;   /* מיישר את הטקסט לפי הצורך */
 }
 </style>
 </head>
@@ -253,7 +251,7 @@ margin-right:68%;   /* מזיז שמאלה בעמוד RTL */
 </div>
 <section class="sectiones" id="order">
   <form class="order-form" onsubmit="sendMail(event)">
-    <h2 data-aos="fade-up">טופס הזמנה</h2>
+<h2 class="order-title" data-aos="fade-up">טופס הזמנה</h2>
     <input id="name" type="text" placeholder="שם מלא" required>
     <input id="phone" type="tel" placeholder="טלפון (05XXXXXXXX)" required pattern="^05\d{8}$">
     <input type="date" id="eventDate" required>
