@@ -221,6 +221,9 @@ footer{background:var(--soft); padding:80px 10%; text-align:center; font-weight:
 .section{padding:80px 5%;}
 .card{height:300px;}
 }
+  .order-form{
+margin-right:29%;   /* מזיז שמאלה בעמוד RTL */
+}
 </style>
 </head>
 
@@ -250,7 +253,7 @@ footer{background:var(--soft); padding:80px 10%; text-align:center; font-weight:
 <section class="sectiones" id="order">
 <h2 data-aos="fade-up">טופס הזמנה</h2>
 
-<form onsubmit="sendMail(event)">
+<form class="order-form" onsubmit="sendMail(event)">
 <input id="name" type="text" placeholder="שם מלא" required>
 
 <input id="phone" type="tel" placeholder="טלפון (05XXXXXXXX)" required pattern="^05\d{8}$">
