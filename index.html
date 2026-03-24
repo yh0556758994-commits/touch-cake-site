@@ -224,6 +224,9 @@ footer{background:var(--soft); padding:80px 10%; text-align:center; font-weight:
   .order-form{
 margin-right:68%;   /* מזיז שמאלה בעמוד RTL */
 }
+  .order-form {
+  margin-right:68%;  /* מזיז את הטופס והכותרת שמאלה בעמוד RTL */
+}
 </style>
 </head>
 
@@ -248,23 +251,15 @@ margin-right:68%;   /* מזיז שמאלה בעמוד RTL */
 <div class="card special" data-aos="zoom-in"><img src="images/cake4.jpg"><div class="overlay">קונספט מיוחד</div></div>
 <div class="card special" data-aos="zoom-in"><img src="images/cake5.jpg"><div class="overlay">עוגות בר מצווה</div></div>
 </div>
-</section>
-
 <section class="sectiones" id="order">
-<h2 data-aos="fade-up">טופס הזמנה</h2>
-
-<form class="order-form" onsubmit="sendMail(event)">
-<input id="name" type="text" placeholder="שם מלא" required>
-
-<input id="phone" type="tel" placeholder="טלפון (05XXXXXXXX)" required pattern="^05\d{8}$">
-
-<input type="date" id="eventDate" required>
-
-<textarea id="message" placeholder="ספר/י לנו איזה עוגה תרצו" rows="4" required></textarea>
-
-<button type="submit">שלח/י הזמנה</button>
-</form>
-
+  <form class="order-form" onsubmit="sendMail(event)">
+    <h2 data-aos="fade-up">טופס הזמנה</h2>
+    <input id="name" type="text" placeholder="שם מלא" required>
+    <input id="phone" type="tel" placeholder="טלפון (05XXXXXXXX)" required pattern="^05\d{8}$">
+    <input type="date" id="eventDate" required>
+    <textarea id="message" placeholder="ספר/י לנו איזה עוגה תרצו" rows="4" required></textarea>
+    <button type="submit">שלח/י הזמנה</button>
+  </form>
 </section>
 <footer>
 <p>© 2026 TOUCH CAKE</p>
