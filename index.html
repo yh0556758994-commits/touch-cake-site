@@ -1,3 +1,4 @@
+זה הקוד שלי אני מעוניין שתזיז לי את הטופס הזמנה קצת שמאלה בשליש השמאלי של העמוד
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
@@ -124,18 +125,10 @@ padding-left: 10px;
 
 .sectiones{
   height:100vh;
-  background:linear-gradient(rgba(255,255,255,0.25), rgba(255,255,255,0.25)), url('images/unnamed.jpg') no-repeat center center/cover;
-
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-
-  align-items:flex-start;   /* ← במקום center */
-  padding-left:-200%;         /* ← מזיז לשליש שמאלי */
-  
-  text-align:right;
-  overflow:hidden;
-  z-index:0;
+background:linear-gradient(rgba(255,255,255,0.25), rgba(255,255,255,0.25)), url('images/unnamed.jpg') no-repeat center center/cover;
+display:flex; flex-direction:column; justify-content:center; align-items:center;
+text-align:center; /*position:relative*/; overflow:hidden;
+z-index:0;
 }
   
    /* .sectiones h2{
@@ -221,10 +214,6 @@ footer{background:var(--soft); padding:80px 10%; text-align:center; font-weight:
 .section{padding:80px 5%;}
 .card{height:300px;}
 }
-.order-title {
-  margin-right:68%;   /* מזיז את הכותרת שמאלה בעמוד RTL */
-  text-align:right;   /* מיישר את הטקסט לפי הצורך */
-}
 </style>
 </head>
 
@@ -249,15 +238,23 @@ footer{background:var(--soft); padding:80px 10%; text-align:center; font-weight:
 <div class="card special" data-aos="zoom-in"><img src="images/cake4.jpg"><div class="overlay">קונספט מיוחד</div></div>
 <div class="card special" data-aos="zoom-in"><img src="images/cake5.jpg"><div class="overlay">עוגות בר מצווה</div></div>
 </div>
+</section>
+
 <section class="sectiones" id="order">
-  <form class="order-form" onsubmit="sendMail(event)">
-<h2 class="order-title" data-aos="fade-up">טופס הזמנה</h2>
-    <input id="name" type="text" placeholder="שם מלא" required>
-    <input id="phone" type="tel" placeholder="טלפון (05XXXXXXXX)" required pattern="^05\d{8}$">
-    <input type="date" id="eventDate" required>
-    <textarea id="message" placeholder="ספר/י לנו איזה עוגה תרצו" rows="4" required></textarea>
-    <button type="submit">שלח/י הזמנה</button>
-  </form>
+<h2 data-aos="fade-up">טופס הזמנה</h2>
+
+<form onsubmit="sendMail(event)">
+<input id="name" type="text" placeholder="שם מלא" required>
+
+<input id="phone" type="tel" placeholder="טלפון (05XXXXXXXX)" required pattern="^05\d{8}$">
+
+<input type="date" id="eventDate" required>
+
+<textarea id="message" placeholder="ספר/י לנו איזה עוגה תרצו" rows="4" required></textarea>
+
+<button type="submit">שלח/י הזמנה</button>
+</form>
+
 </section>
 <footer>
 <p>© 2026 TOUCH CAKE</p>
@@ -348,7 +345,6 @@ colorInput.addEventListener('input', (e) => {
 </body>
 
 </html>
-
 
 
 
